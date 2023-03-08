@@ -29,6 +29,15 @@ if (length < 8) {
   return null;
 }
 
+// Ask and store follow up questions for password
+var hasUpperCase = confirm("Would you like Upper Case characters?");
+var hasLowerCase = confirm("Would you like Lower Case characters?");
+var hasNumbers = confirm("Would you like Numbers?");
+var hasSpecialCharacters = confirm("Would you like Special Characters?");
+
+console.log(length, hasUpperCase, hasLowerCase, hasNumbers, hasSpecialCharacters);
+
+  
   
 }
 
