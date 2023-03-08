@@ -1,8 +1,24 @@
-// Assignment code here
-
-
-// Get references to the #generate element
+// Assignment Code
 var generateBtn = document.querySelector("#generate");
+
+// Generate password based on options
+function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSpecialCharacters) {
+  let characters = ' ';
+  // Define allowable characters
+  
+  if (hasUpperCase) {
+    characters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  }
+  if (hasLowerCase) {
+    characters += 'abcdefghijklmnopqrstuvwxyz';
+  }
+  if (hasNumbers) {
+    characters += '0123456789';
+  }
+  if (hasSpecialCharacters) {
+    characters += '!@#$%^&*()';
+  }
+}
 
 // Write password to the #password input
 function writePassword() {
@@ -13,14 +29,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+//Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
-
-window.alert("Any random string");
-// var r=prompt("Enter a string");
-// var b=confirm("Are you fine");
-
-//var r=Math.floor(Math.random()*10);
