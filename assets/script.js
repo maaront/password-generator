@@ -18,6 +18,18 @@ function generatePassword(length, hasUpperCase, hasLowerCase, hasNumbers, hasSpe
   if (hasSpecialCharacters) {
     characters += '!@#$%^&*()';
   }
+  // Store length of password from user input
+var length = prompt("How many characters would you like your password to be?");
+// Reject any password under 8 in length and start over
+if (length < 8) {
+  alert("Password must be at least 8 characters");
+  return null;
+} else if (length > 128) {
+  alert("Password must be no more than 128 characters")
+  return null;
+}
+
+  
 }
 
 // Write password to the #password input
